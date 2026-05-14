@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>John Augustine Young | AI Systems</title>
+  <style>
+    :root {
+      --bg: #080808;
+      --fg: #f0f0f0;
+      --muted: #666;
+      --accent: #00B2A9; 
+      --border: #222;
+      --maxw: 800px;
+    }
+
+    body { 
+      background: var(--bg); 
+      color: var(--fg); 
+      font: 13px/1.6 "JetBrains Mono", "Fira Code", monospace; 
+      margin: 0; 
+    }
+
+    .wrap { max-width: var(--maxw); margin: 60px auto; padding: 0 40px; }
+
+    header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 40px; }
+    h1 { font-size: 1.2rem; letter-spacing: 2px; margin: 0; text-transform: uppercase; color: var(--fg); }
+    .subtitle { color: var(--accent); margin-top: 4px; font-weight: bold; }
+    
+    nav ul { list-style: none; padding: 0; display: flex; gap: 20px; margin: 20px 0 0; }
+    a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); transition: 0.2s; }
+    a:hover { color: var(--accent); border-color: var(--accent); }
+
+         /* Bento Grid 4 photos */
+    .grid { 
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px; 
+      margin: 40px 0; 
+    }
+    .grid img { 
+      width: calc(50% - 6px); /* Ensures 2 per row, accounting for gap */
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain; /* Shows the full image */
+      border: 1px solid var(--border); 
+      filter: grayscale(100%); 
+      transition: 0.4s; 
+    }
+    
+    .grid img:hover { filter: grayscale(0%); border-color: var(--accent); }
+    .btn { 
+      display: inline-block; padding: 10px 20px; border: 1px solid var(--fg); 
+      background: transparent; color: var(--fg); font-size: 11px; cursor: pointer;
+    }
+    .btn:hover { background: var(--fg); color: var(--bg); }
+
+    footer { margin-top: 80px; font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 20px; }
+    .binary-trail { color: var(--accent); font-size: 10px; position: fixed; pointer-events: none; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>John Augustine Young</h1>
+      <div class="subtitle">AI Systems Engineer — Alignment & Structural Isomorphism</div>
+      <nav>
+        <ul>
+          <li><a href="https://github.com/augstentatious">github</a></li>
+          <li><a href="https://linkedin.com/in/john-augustine-young-bab226158">linkedin</a></li>
+          <li><a href="https://x.com/oogasteen">x</a></li>
+          <li><a href="https://instagram.com/johnyoung32_">instagram</a></li>
+          <li><a href="mailto:augstentatious@gmail.com">email</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<section class="bio-section">
+      <h2>// PROVENANCE & PHILOSOPHY</h2>
+      <p>
+        I spent much of my childhood attempting to piece together a fractured metaphysics. 
+        That instinct—to understand <strong>why things are the way they are</strong>—eventually 
+        shifted its focus from theology to the very structure of intelligence itself. Since then, 
+        "constraints" and "form" have remained my sole preoccupations.
+      </p>
+      <p>
+        My obsession with form has never wavered—whether on the runway, in a spreadsheet, or 
+        within code—save that what I now construct are the models themselves.
+      </p>
+    </section>
+    
+    <section class="grid">
+      <img src="./IMG_1888.jpeg" alt="alien_hat.jpeg">
+      <img src="./IMG_1891.jpeg" alt="cigs-n-celine.jpeg">
+      <img src="./IMG_1894.jpeg" alt="serious-runway-face-_-.jpeg">
+    </section>
+    
+            <h2>// CURRENT RESEARCH</h2>
+      <p>
+        <strong>Referential Invariance in Language Models.</strong> Submitted to NeurIPS 2026. 
+        Demonstrated that frontier LLMs systematically fail to preserve referent identity under 
+        semantic pressure—RDR = 1.0 universally across nine models. Introduced RigidBench v3.1 
+        and the Underdetermination Proposition as a diagnostic framework.
+      </p>
+      <p>
+        <strong>Sophia Protocol.</strong> Investigating the structural isomorphism between 
+        engineering constraints and moral alignment. Fine-tuned on Rust memory safety, 
+        distributed consensus, and thermodynamics. Preliminary results suggest that "Goodness" 
+        is not an external patch, but the optimal state of a rational system.
+      </p>
+      <p>
+        <strong>Distress Kernels.</strong> Interrupt-driven safety mechanisms for LLMs. 
+        Trauma-informed boundary enforcement using amygdala-inspired attention masks, 
+        Bayesian risk proxies, and D-REX deception detection. Crisis-first, zero-proof 
+        distress authentication.
+      </p>
+      <a class="btn" href="John_Young_Resume.pdf">DOWNLOAD_CV (PDF)</a>
+    </section>
+
+    <footer>
+      LOCATION: ORANGE COUNTY, CA // NEURIPS 2026 SUBMITTED <br>
+      "Constraint is not the enemy of intelligence, it is the source. " — John Augustine Young // © 2025
+    </footer>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const chars = ['0','1'];
+      window.addEventListener('mousemove', e => {
+        const s = document.createElement('div');
+        s.className = 'binary-trail';
+        s.textContent = chars[Math.floor(Math.random()*2)];
+        s.style.left = e.clientX + 'px';
+        s.style.top = e.clientY + 'px';
+        document.body.appendChild(s);
+        setTimeout(() => {
+          s.style.transform = 'translateY(15px)';
+          s.style.opacity = '0';
+          setTimeout(() => s.remove(), 400);
+        }, 50);
+      });
+    })();
+  </script>
+</body>
+</html>
