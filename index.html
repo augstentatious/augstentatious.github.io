@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="John Augustine Young — AI systems engineer focused on alignment, referential invariance, and efficient inference architectures." />
   <title>John Augustine Young | AI Systems</title>
   <style>
     :root {
@@ -31,24 +32,28 @@
     a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); transition: 0.2s; }
     a:hover { color: var(--accent); border-color: var(--accent); }
 
-         /* Bento Grid 4 photos */
     .grid { 
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px; 
       margin: 40px 0; 
     }
     .grid img { 
-      width: calc(50% - 6px); /* Ensures 2 per row, accounting for gap */
-      height: auto;
-      aspect-ratio: auto;
-      object-fit: contain; /* Shows the full image */
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center;
       border: 1px solid var(--border); 
       filter: grayscale(100%); 
       transition: 0.4s; 
     }
     
     .grid img:hover { filter: grayscale(0%); border-color: var(--accent); }
+    @media (max-width: 700px) {
+      .wrap { margin: 32px auto; padding: 0 20px; }
+      nav ul { flex-wrap: wrap; gap: 12px; }
+      .grid { grid-template-columns: 1fr; }
+    }
     .btn { 
       display: inline-block; padding: 10px 20px; border: 1px solid var(--fg); 
       background: transparent; color: var(--fg); font-size: 11px; cursor: pointer;
@@ -90,12 +95,13 @@
     </section>
     
     <section class="grid">
-      <img src="./IMG_1888.jpeg" alt="alien_hat.jpeg">
-      <img src="./IMG_1891.jpeg" alt="cigs-n-celine.jpeg">
-      <img src="./IMG_1894.jpeg" alt="serious-runway-face-_-.jpeg">
+      <img src="./IMG_1888.jpeg" alt="Editorial profile portrait with sculptural headpiece">
+      <img src="./IMG_1891.jpeg" alt="Black-and-white editorial dialogue scene">
+      <img src="./IMG_1894.jpeg" alt="Runway portrait in experimental tailoring">
     </section>
     
-            <h2>// CURRENT RESEARCH</h2>
+    <section class="research-section">
+      <h2>// CURRENT RESEARCH</h2>
       <p>
         <strong>Referential Invariance in Language Models.</strong> Submitted to NeurIPS 2026. 
         Demonstrated that frontier LLMs systematically fail to preserve referent identity under 
@@ -114,13 +120,12 @@
         Bayesian risk proxies, and D-REX deception detection. Crisis-first, zero-proof 
         distress authentication.
       </p>
-      <a class="btn" href="John_Young_Resume.pdf">DOWNLOAD_CV (PDF)</a>
+      <a class="btn" href="John_Young_Resume.pdf">DOWNLOAD RESUME (PDF)</a>
     </section>
 
     <footer>
       LOCATION: ORANGE COUNTY, CA // NEURIPS 2026 SUBMITTED <br>
-      "Constraint is not the enemy of intelligence, it is the source. " — John Augustine Young // © 2025
-    </footer>
+      "Constraint is not the enemy of intelligence; it is the source." — John Augustine Young // © 2026
     </footer>
   </div>
 
